@@ -9,6 +9,10 @@
 #ifndef __SYS_REG_H__
 #define __SYS_REG_H__
 
+#if defined ( __CC_ARM   )
+#pragma anon_unions
+#endif
+
 /** @addtogroup REGISTER Control Register
 
   @{
@@ -21,7 +25,7 @@
     Memory Mapped Structure for SYS Controller
   @{
 */
-
+#if 0
 typedef struct
 {
 
@@ -1245,6 +1249,7 @@ typedef struct
 
 
 } SYS_T;
+#endif
 
 /**
     @addtogroup SYS_CONST SYS Bit Field Definition
@@ -2364,6 +2369,7 @@ typedef struct
 
 
 /**@}*/ /* SYS_CONST */
+#if 0
 typedef struct
 {
 
@@ -2503,6 +2509,8 @@ typedef struct
     __I   uint32_t NMISTS;         /* Offset: 0x04  NMI source interrupt Status Register                               */
 
 } SYS_INT_T;
+#endif
+
 /**
     @addtogroup INT_CONST INT Bit Field Definition
     Constant Definitions for INT Controller
@@ -2616,5 +2624,8 @@ typedef struct
 /**@}*/ /* end of SYS register group */
 /**@}*/ /* end of REGISTER group */
 
+#if defined ( __CC_ARM   )
+#pragma no_anon_unions
+#endif
 
 #endif /* __SYS_REG_H__ */

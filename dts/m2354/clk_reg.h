@@ -22,7 +22,7 @@
     Memory Mapped Structure for CLK Controller
   @{
 */
-
+#if 0 
 typedef struct
 {
 
@@ -1137,6 +1137,7 @@ typedef struct
     __IO uint32_t HXTFSEL;               /*!< [0x00B4] HXT Filter Select Control Register                               */
 
 } CLK_T;
+#endif
 
 /**
     @addtogroup CLK_CONST CLK Bit Field Definition
